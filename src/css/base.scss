@@ -1,6 +1,72 @@
-/* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: pink;
+$title-font: 'Rubik', sans-serif;
+$bates-blue: #1079B2;
+$white: #ffffff;
 
-body {
-  background-color: $primary-background;
+.clearfix:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+*,
+*:after,
+*:before {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // border: 1px solid red;
+}
+
+nav {
+  background: $bates-blue;
+  font-family: $title-font;
+  font-size: 3em;
+  color: white;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3% 0;
+  // align-content: center;
+}
+
+.main_container {
+  background: lightgrey;
+  height: 100vh;
+  width: 100%;
+}
+
+.nav_login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+.login-input {
+  height: 40px;
+  width: 190px;
+  margin: 2.5% 0;
+  padding: 0 2%;
+}
+
+.main_left-section {
+  width: 50%;
+  float: left;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.main_right-section {
+  width: 50%;
+  float: right;
+  height: 100%;
+  border: 1px solid red;
 }
