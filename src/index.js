@@ -2,6 +2,9 @@ import $ from 'jquery';
 import './css/base.scss';
 
 import Person from "./Person";
+import Motel from "./Motel";
+// import Manager from "./Manager";
+// import Room from "./Room";
 // import Customer from "./Customer";
 
 // 1) Total Rooms Available for today’s date
@@ -23,8 +26,8 @@ getData('/users/users').then(function(user) {
 	users.forEach(function(user) {
 		// console.log(user.name)
 	})
-
 	// console.log(users[0].name)
+
 
 	$('.js_login-submit').on('click', function() {
     if ($('.user_name').val() === 'manager' && $('.user_pswd').val() === 'overlook2019') {
