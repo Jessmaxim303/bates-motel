@@ -1,8 +1,11 @@
 class Person {
+
 	constructor(user) {
-		// this.name = user.id;
-  //   this.ID = 5619;
+		this.name = user.id;
+    this.Id = {};
 	}
-}
+
+
+};
 
 export default Person;
