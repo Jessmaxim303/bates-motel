@@ -1,4 +1,6 @@
 $title-font: 'Rubik', sans-serif;
+$manager-title-font: 2em;
+$title-font-size: 3em;
 $bates-blue: #1079B2;
 $white: #ffffff;
 
@@ -26,7 +28,7 @@ padding: 0;
 nav {
   background: $bates-blue;
   font-family: $title-font;
-  font-size: 3em;
+  font-size: $title-font-size;
   color: white;
   height: 20vh;
   width: 100%;
@@ -34,7 +36,6 @@ nav {
   flex-direction: row;
   justify-content: center;
   padding: 3% 0;
-  // align-content: center;
 }
 
 .main_container {
@@ -47,12 +48,17 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 0 10%;
 }
 
 .login-input {
-  height: 40px;
+  height: 100px;
   width: 190px;
+  margin: .65% 3%;
+}
+
+.js_login-submit {
+  height: 40px;
+  width: 55px;
   margin: 2.5% 0;
   padding: 0 2%;
 }
@@ -61,12 +67,29 @@ nav {
   width: 50%;
   float: left;
   height: 100%;
-  border: 1px solid red;
 }
 
 .main_right-section {
   width: 50%;
   float: right;
   height: 100%;
-  border: 1px solid red;
 }
+
+.manager_nav {
+  background: $bates-blue;
+  font-family: $title-font;
+  color: #white;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 3% 0;
+}
+
+.manager_right-data {
+  font-family: $title-font;
+}
+
+
+
