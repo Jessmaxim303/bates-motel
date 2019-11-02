@@ -32,12 +32,18 @@ module.exports = {
     ],
   },
   // Below is needed for webpack-dev-server
-  plugins: [
+plugins: [
     new HtmlWebpackPlugin({
+      filename: 'manager.html',
+      template: './src/manager.html'
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
       template: './src/index.html'
     })
   ],
   devServer: {
          contentBase: './dist'
   }
+
 };

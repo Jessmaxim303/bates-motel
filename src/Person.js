@@ -1,10 +1,9 @@
 class Person {
 
 	constructor(user) {
-		this.name = user.id;
-    this.Id = {};
+    this.id = user.id;
+		this.name = user.name;
 	}
-
 
 };
 
