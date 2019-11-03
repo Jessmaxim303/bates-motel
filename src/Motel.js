@@ -10,7 +10,7 @@ class Motel {
 		return acc
 	}, 0);
  }
-
+ 
 
 };
 
