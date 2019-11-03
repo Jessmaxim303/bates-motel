@@ -13,16 +13,15 @@ $white: #ffffff;
 *,
 *:after,
 *:before {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // border: 1px solid red;
 }
 
 nav {
@@ -73,6 +72,7 @@ nav {
   width: 50%;
   float: right;
   height: 100%;
+  padding: 3%;
 }
 
 .manager_nav {
@@ -89,6 +89,10 @@ nav {
 
 .manager_right-data {
   font-family: $title-font;
+}
+
+.manager_data {
+  font-weight: 400;
 }
 
 
