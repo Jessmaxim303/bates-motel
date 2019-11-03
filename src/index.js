@@ -15,11 +15,6 @@ var today = new Date();
 console.log(today)
 var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+0+today.getDate();
 
-// 1) Total Rooms Available for today’s date
-// 2) Total revenue for today’s date
-
-// 3) Percentage of rooms occupied for today’s date
-
 function getData(type) {
 	const root = 'https://fe-apps.herokuapp.com/api/v1/overlook/1904';
 	const url = `${root}${type}`;
@@ -43,6 +38,7 @@ getData('/users/users').then(function(user) {
 		bookings = booked.bookings;
 		const room = new Room(bookings);
 	  $('#js_today-revenue').text('$' + room.todaysRevenue(bookings, rooms, date));
+	  $('#js_percent-booked').text('%' + room.percentBooked(bookings, rooms, date));
 	})
 
 	$('.js_login-submit').on('click', function() {
