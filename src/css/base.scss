@@ -1,6 +1,9 @@
 $title-font: 'Rubik', sans-serif;
 $manager-title-font: 2em;
 $title-font-size: 3em;
+$data-font-size: 1.2em;
+$font-slim: 400;
+$font-bold: 900;
 $bates-blue: #1079B2;
 $white: #ffffff;
 
@@ -94,6 +97,18 @@ nav {
 .manager_data {
   font-weight: 400;
 }
+
+#js_insert-history {
+  font-size: $data-font-size;
+  font-weight: $font-slim;
+}
+
+.user-booking {
+  list-style: none;
+}
+
+
+
 
 
 
