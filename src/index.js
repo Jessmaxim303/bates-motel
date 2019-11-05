@@ -7,9 +7,13 @@ import Manager from "./Manager";
 import Room from "./Room";
 import Customer from "./Customer";
 
+// 1) Any room bookings I have made (past or present/upcoming)
+// 2) The total amount I have spent on rooms
+
 var users;
 var rooms;
 var bookings;
+var userId;
 
 var today = new Date();
 console.log(today)
@@ -42,15 +46,23 @@ getData('/users/users').then(function(user) {
 	})
 
 	$('.js_login-submit').on('click', function() {
+		  let userId = Number($('.user_name').val().slice(-2)) - 1;
+  	  const customer = new Customer(userId);
+  	  const room = new Room(bookings);
     if ($('.user_name').val() === 'manager' && $('.user_pswd').val() === 'overlook2019') {
       window.location = "./manager.html";
-  } else if ($('.user_name').val() === 'customer50' && $('.user_pswd').val() === 'overlook2019') {
-      $('#js_insert-name').text(users[0].name)
+  } else if ($('.user_name').val() === 'customer' + `${$('.user_name').val().slice(-2)}` && $('.user_pswd').val() === 'overlook2019') {
+      $('#js_today-revenue').text('$' + room.todaysRevenue(bookings, rooms, date));
+      $('#js_insert-name').text(customer.returnUsersName(userId, users, bookings));
+      $('#js_insert-history').after(customer.returnUsersBookings(userId, users, bookings));
+      $('#js_money-spent').text('$' + customer.totalMoneySpent(userId, rooms, bookings));
   }
 });
 
 
 });  //End of getData
+
+
 
 
  

@@ -29,6 +29,7 @@ class Room {
     }, []).filter(el => el !=undefined);
     return (percent.length / rooms.length).toFixed(2) * 100;
  }
+ 
 
 };
 
