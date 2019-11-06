@@ -9,14 +9,8 @@ import userData from '../test/user-data';
 const spies = require('chai-spies');
 chai.use(spies);
 
-
 describe('Room class', function() {
   let room;
-
-  beforeEach(() => {
-    room = new Room(bookingData);
-    
-})
 
   it('should be an object', function() {
     expect(Room).to.be.a('function');
