@@ -7,8 +7,6 @@ import Manager from "./Manager";
 import Room from "./Room";
 import Customer from "./Customer";
 
-// 1) Any room bookings I have made (past or present/upcoming)
-// 2) The total amount I have spent on rooms
 
 var users;
 var rooms;
@@ -60,7 +58,7 @@ getData('/users/users').then(function(user) {
 });
 
 
-});  //End of getData
+}); 
 
 
 
