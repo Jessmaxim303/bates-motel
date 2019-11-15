@@ -14,7 +14,6 @@ var bookings;
 var userId;
 
 var today = new Date();
-console.log(today)
 var date = today.getFullYear()+'/'+(today.getMonth()+1)+'/'+0+today.getDate();
 
 function getData(type) {
@@ -25,9 +24,9 @@ function getData(type) {
 	return promise;
 }
 
-getData('/users/users').then(function(user) {
-	users = user.users;
-	users.forEach(function(user) {
+  getData('/users/users').then(function(user) {
+  	users = user.users;
+	  users.forEach(function(user) {
 	})
 
 	getData('/rooms/rooms').then(function(room) {
@@ -41,6 +40,13 @@ getData('/users/users').then(function(user) {
 		const room = new Room(bookings);
 	  $('#js_today-revenue').text('$' + room.todaysRevenue(bookings, rooms, date));
 	  $('#js_percent-booked').text('%' + room.percentBooked(bookings, rooms, date));
+
+    $('#calendar_button').on('click', function() {
+  	  bookings = booked.bookings;
+		  const room = new Room(bookings);
+    	$('#js_open-dates').after(room.availableRoomsByDate($('#calendar_input').val(), bookings, rooms));
+    })
+
 	})
 
 	$('.js_login-submit').on('click', function() {
@@ -54,8 +60,10 @@ getData('/users/users').then(function(user) {
       $('#js_insert-name').text(customer.returnUsersName(userId, users, bookings));
       $('#js_insert-history').after(customer.returnUsersBookings(userId, users, bookings));
       $('#js_money-spent').text('$' + customer.totalMoneySpent(userId, rooms, bookings));
-  }
-});
+    }
+
+  });
+
 
 
 }); 

@@ -5,6 +5,7 @@ $data-font-size: 1.2em;
 $font-slim: 400;
 $font-bold: 900;
 $bates-blue: #1079B2;
+$side-menu: #006699;
 $white: #ffffff;
 
 .clearfix:after {
@@ -66,16 +67,23 @@ nav {
 }
 
 .main_left-section {
-  width: 50%;
+  width: 30%;
   float: left;
   height: 100%;
+  padding: 3%;
+  background: $side-menu;
+  color: #ffffff;
+  font-family: $title-font;
+  font-weight: $font-slim;
 }
 
 .main_right-section {
-  width: 50%;
+  width: 70%;
   float: right;
   height: 100%;
   padding: 3%;
+  color: #006699;
+  font-family: $title-font;
 }
 
 .manager_nav {
@@ -107,6 +115,56 @@ nav {
   list-style: none;
 }
 
+#calendar_button {
+  width: 45px;
+  height: 30px;
+}
+
+#calendar_input {
+  width: 140px;
+  height: 30px;
+}
+
+#js_insert-dates {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.book_room-find {
+  color: #ffffff;
+  font-family: $title-font;
+  list-style: none;
+  color: #006699;
+}
+
+.book_room-stats {
+  color: #ffffff;
+  font-family: $title-font;
+  list-style: none;
+  color: #006699;
+}
+
+.book_room-box {
+  border: 1px solid #006699;
+  width: 70%;
+  height: 120px;
+  padding: 2% 5%;
+  margin: 2%;
+  background: #ffffff;
+  box-shadow: 0 7px 6px -6px #777;
+}
+
+.room_info-photo {
+  display: inline-block;
+  width: 95px;
+  height: 95px;
+  border: 1px solid #006699;
+  background: #ffffff;
+}
+
+.room_info {
+  float: right;
+}
 
 
 
